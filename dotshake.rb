@@ -5,21 +5,21 @@
 class Dotshake < Formula
   desc "P2P mesh network using WireGuard"
   homepage "https://dotshake.com/"
-  version "0.0.32"
+  version "0.0.40"
   license "BSD3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Notch-Technologies/dotshake/releases/download/v0.0.32/dotshake_0.0.32_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "ca1323584d08c5970fae45b6ec23378ff067980208de067794ec201daa3f41cb"
+      url "https://github.com/Notch-Technologies/dotshake/releases/download/v0.0.40/dotshake_stable_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "fe729452a15f21d08471813c512439c9379cfb67624f3e19952bf81fd1e424f5"
 
       def install
         bin.install "dotshake"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Notch-Technologies/dotshake/releases/download/v0.0.32/dotshake_0.0.32_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "42c37bb5658bb8ae782adf419b78ba790ef6d2a5465677bd0e14dd0c12adea3f"
+      url "https://github.com/Notch-Technologies/dotshake/releases/download/v0.0.40/dotshake_stable_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "013b4c0894a673d80ac62552f33a817113ee941efc2b5c8a884c2e8ff621a922"
 
       def install
         bin.install "dotshake"
@@ -29,24 +29,24 @@ class Dotshake < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/Notch-Technologies/dotshake/releases/download/v0.0.32/dotshake_0.0.32_linux_armv6.tar.gz", using: CurlDownloadStrategy
-      sha256 "7e4b118f7717aba3151a85b18c9fbe9b3ed279c13e21285b8440b70e2160db32"
+      url "https://github.com/Notch-Technologies/dotshake/releases/download/v0.0.40/dotshake_stable_linux_armv6.tar.gz", using: CurlDownloadStrategy
+      sha256 "28fff6e1b2e5f0b62b6754209936366436f42e17d204e3c259a1919f66b45b08"
 
       def install
         bin.install "dotshake"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Notch-Technologies/dotshake/releases/download/v0.0.32/dotshake_0.0.32_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "abd63311dea7903dbe5a95ce47d950e118f14bb26ed4a0d830e49ea5e10fdffb"
+      url "https://github.com/Notch-Technologies/dotshake/releases/download/v0.0.40/dotshake_stable_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "8733bcba89a5b21236c5cbfcf6eda25f2419ecc6b0e81a5ebcd694fcbd3f03e2"
 
       def install
         bin.install "dotshake"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Notch-Technologies/dotshake/releases/download/v0.0.32/dotshake_0.0.32_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "66e242873383fd23e5bc89725f85c2b6e25bd8a9c54a03f6f3c4dce012aad331"
+      url "https://github.com/Notch-Technologies/dotshake/releases/download/v0.0.40/dotshake_stable_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "2ff77317534324d91ce197d165c7196197ba867a01958b66cd934486f28c788d"
 
       def install
         bin.install "dotshake"
